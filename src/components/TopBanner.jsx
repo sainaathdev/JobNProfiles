@@ -7,23 +7,31 @@ const TopBanner = () => {
   if (!visible) return null;
 
   return (
-    <div className="bg-orange-500 text-white px-4 py-2 text-center relative">
-      <span className="font-bold text-xl mr-2">
-        🎁
-        <FaTrophy className="inline-block text-2xl" /> SPECIAL OFFER: 90 Day
-        Money Back Guarantee!
-      </span>
-      <span className="bg-white p-1 text-orange-500 rounded-full px-2 font-semibold">
-        47,240 Happy Customers
-      </span>
-      <FaStar className="inline-block text-3xl text-yellow-400 ml-2 " />
+    <div className="bg-orange-500 text-white px-4 py-3 relative">
+      {/* Dismiss Button */}
       <button
-        className="absolute right-4 top-2 text-white text-lg"
+        className="absolute right-3 top-3 text-white text-2xl font-bold"
         onClick={() => setVisible(false)}
       >
         ×
       </button>
-      <p className="mt-4 text-md">
+
+      {/* Main Content */}
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
+        <span className="font-bold text-lg sm:text-xl flex items-center justify-center gap-1">
+          🎁 <FaTrophy className="text-xl sm:text-2xl" />
+          SPECIAL OFFER: 90 Day Money Back Guarantee!
+        </span>
+
+        <span className="bg-white text-orange-500 font-semibold rounded-full px-3 py-1 text-sm sm:text-base">
+          47,240 Happy Customers
+        </span>
+
+        <FaStar className="text-yellow-400 text-xl sm:text-2xl" />
+      </div>
+
+      {/* Offer Text */}
+      <p className="mt-2 text-sm sm:text-base text-center">
         Limited time offer for first 50,000 customers - Join now!
       </p>
     </div>
